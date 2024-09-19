@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recipe Catalogue</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="navbar-left">
+        <a href="#"><h1>Cookpal</h1></a>
+    </div>
+    <div class="navbar-right">
+      <ul>
+        <a href="#"><li>Home</li></a>
+        <a href="#"><li>Explore</li></a>
+        <a href="#"><li>Help</li></a>
+        <li><img src="./IMG_20240518_234959.jpg" alt="User Icon"></li>
+      </ul>
+    </div>
+  </header>
+
+  
+
+ 
+  <section class="hero">
+    <img src="https://media.gettyimages.com/id/1250436252/photo/healthy-vegan-lunch-bowl-making-detox-beautiful-buddha-bowl-with-various-fresh-vegetables.jpg?s=1024x1024&w=gi&k=20&c=rbKMzrzLjKTY8CuZ3WiZTmlcF3nfVnXSviY6J4sCE1k=" alt="Featured Recipe">
+    
+  </section>
+
+ 
+
+  <!-- Recipe Grid Section -->
+  <header>
+    <h1>Recipe Catalogue</h1>
+    <section class="search-bar ">
+    <input type="text" id="searchBar" placeholder="Search recipes..." onkeyup="filterRecipes()">
+    <button>Search</button>
+</section>
+    <div class="filter-options">
+        <button onclick="toggleType('all')">Show All</button>
+        <button onclick="toggleType('veg')">Show Only Veg</button>
+        <button onclick="toggleType('non-veg')">Show Only Non-Veg</button>
+        <label><input type="radio" name="ratingFilter" onclick="filterByRating(4.5)"> Rating Above 4.5</label>
+        <label><input type="radio" name="ratingFilter" onclick="filterByRating(4.0)"> Rating Below 4.0</label>
+    </div>
+</header>
+
+<main>
+    <div class="recipe-grid" id="recipe-grid">
+        <!-- Cards will be dynamically generated here -->
+    </div>
+</main>
+
+<section class="recipe-container" id="recipeContainer">
+    <!-- Recipe Cards will be dynamically added here -->
+</section>
+
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-column">
+        <h3>Cookpal</h3>
+        <p>Cookpal is a recipe website with an easy-to-use search function, a wide variety of delicious recipes, and an invitation to join our community and cook together!</p>
+        <div class="social-icons">
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
+            <a href="#">Instagram</a>
+            <a href="#">YouTube</a>
+        </div>
+    </div>
+    <div class="footer-column">
+        <h3>Company</h3>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Explore</a></li>
+            <li><a href="#">Team</a></li>
+            <li><a href="#">Activity</a></li>
+        </ul>
+    </div>
+    <div class="footer-column">
+        <h3>Resources</h3>
+        <ul>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Use Cases</a></li>
+            <li><a href="#">Testimonials</a></li>
+            <li><a href="#">Insights</a></li>
+        </ul>
+    </div>
+    <div class="footer-column newsletter">
+        <h3>Newsletter</h3>
+        <input type="email" placeholder="Your Email">
+        <button>Subscribe</button>
+    </div>
+</footer>
+
+  <!-- Left Sidebar -->
+  <div id="sidebar" class="sidebar">
+   
+    <a href="#">Home</a>
+    <a href="#">Explore</a>
+    <a href="#">Help</a>
+  </div>
+
+  <button class="open-btn" onclick="toggleSidebar()"></button>
+
+  <script src="script.js"></script>
+</body>
+</html>
